@@ -1,5 +1,5 @@
 export const displayLightbox = medias => {
-
+// Récupère les éléments pour l'affichage de la lightbox
     const lightboxWrapper = document.querySelector('.lightbox_wrapper');
     const btnClose = document.querySelector('.btn_close_lightbox');
     const btnPrevious = document.querySelector('.btn_previous');
@@ -10,7 +10,7 @@ export const displayLightbox = medias => {
     const photographer = medias.photographer;
     const mediasList = medias.medias;
     let currentIndex = 0; 
-
+// Evènement au clique pour l'affichage de la lightbox
     mediaProvider.forEach(media => {
         media.addEventListener('click', () => {
             const mediaId = media.dataset.media;

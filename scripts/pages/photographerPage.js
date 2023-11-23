@@ -10,7 +10,7 @@ import { displayLightbox } from "../utils/lightbox.js";
 
 const photographerApi = new Api("./data/photographers.json");
 const photographerId = new URLSearchParams(window.location.search).get("id");
-
+// Récupère les donées du photographe et des médias associés
 export const getPhotographerById = async () => {
     const { photographers, media} = await photographerApi.get();
     const photographer = photographers

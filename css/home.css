@@ -56,26 +56,3 @@ article a:focus:not(:hover){
 .photographer_price {
     color: var(--color-dark-medium);
 }
-
-/* RESPONSIVE */
-@media screen and (max-width: 1040px) {
-    header{
-        flex-direction: column;
-    }
-    .photographer_section article {
-        width: 45%;
-    }
-}
-
-@media screen and (max-width: 725px) {
-    header{
-        padding: 0;
-    }
-    .photographer_section {
-        margin-top: 30px; 
-        gap: 20px;
-    }
-    .photographer_section article {
-        width: 100%;
-    }
-}
