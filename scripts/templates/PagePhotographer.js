@@ -17,7 +17,7 @@ export default class PagePhotographer {
                 <p class="photographer_location">${this.photographer.city}, ${this.photographer.country}</p>
                 <p class="photographer_tagline">${this.photographer.tagline}</p>    
             </div>
-            <button class="btn btn_cta" type="button" aria-label="Open contact form">Contactez-moi</button>
+            <button class="btn btn_cta" type="button" aria-label="Ouverture du formulaire">Contactez-moi</button>
             <img class="photographer_thumbnail" src="assets/photographers/thumbnails/${this.photographer.portrait}" alt="${this.photographer.name}">
         `;
         profilePhotographer.innerHTML = about;

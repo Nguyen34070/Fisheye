@@ -16,14 +16,14 @@ export default class PhotographerMedias {
                     </video>`;
             return `
                     <article class="gallery_card">                           
-                        <a href="#" data-media=${media.id} role="link" aria-label="View media large">
+                        <a href="#" data-media=${media.id} role="link" aria-label="Afficher les médias en grand">
                             <figure>${mediaContent}</figure>
                         </a>
                         <figcaption>
                             <h2>${media.title}</h2>
-                                <div role="group" aria-label="Like button and number of likes">
+                                <div role="group" aria-label="Bouton j'aime et nombre de j'aime">
                                     <span class="nbLike">${media.likes}</span> 
-                                    <button class="btn_like" type="button" aria-label="Like" data-id="${media.id}">
+                                    <button class="btn_like" type="button" aria-label="J'aime" data-id="${media.id}">
                                         <span class="fas fa-heart" aria-hidden="true"></span>
                                     </button> 
                                 </div>
