@@ -11,7 +11,7 @@ export const displayTotalLikes = async () => {
     };
 
     updateTotalLikes();
-// Serie de d'actions pour les évènements au clique pour les likes
+// Serie d'actions pour les évènements au clique pour les likes
     allBtnLike.forEach(btn => {
         btn.addEventListener("click", () => {
             const media = medias.find(media => media.id == btn.dataset.id);

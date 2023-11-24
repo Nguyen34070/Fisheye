@@ -27,7 +27,7 @@ const displayProfile = async () => {
     const headerTemplate = new PagePhotographer(photographer);
     headerTemplate.createPagePhotographer();
     const mediasTemplate = new PhotographerMedias(photographer, medias);
-    mediasTemplate.createPhotographerMedias();
+    mediasTemplate.createMedias();
 
     displayTotalLikes();
     openCloseFormContact();

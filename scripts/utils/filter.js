@@ -53,7 +53,7 @@ export const displayMediaWithFilter = mediasTemplate => {
                 break;
         }
         
-        mediasTemplate.createPhotographerMedias();
+        mediasTemplate.createMedias();
         const mediasfiltered = mediasTemplate;
         displayLightbox(mediasfiltered);
         displayTotalLikes();

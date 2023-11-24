@@ -4,8 +4,8 @@ export default class PhotographerMedias {
         this.medias = medias;
     };
 
-    createPhotographerMedias() {
-        const profilePageContent = document.querySelector(".main_content_medias");
+    createMedias() {
+        const profileContent = document.querySelector(".main_content_medias");
         const content = `
             <section class="gallery">
                 ${this.medias.map(media => {
@@ -41,7 +41,7 @@ export default class PhotographerMedias {
             </aside>
         `;
 
-        profilePageContent.innerHTML = content;
+        profileContent.innerHTML = content;
         return content;
     };
 };
