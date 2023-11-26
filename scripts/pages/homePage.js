@@ -4,7 +4,7 @@ import PhotographerCard from '../templates/PhotographerCard.js';
 
 const photographerSection = document.querySelector(".photographer_section");
 const photographerApi = new Api("./data/photographers.json");
-
+// Affichage des photographes
 const displayPhotographer = async () => {
     const photographerData = await photographerApi.get();
     const photographers = photographerData.photographers;

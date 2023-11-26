@@ -7,8 +7,9 @@ import { displayTotalLikes } from "../utils/likes.js";
 import { openCloseFormContact, validateForm } from "../utils/form.js";
 import { openCloseFilterMenu, displayMediaWithFilter } from "../utils/filter.js";
 import { displayLightbox } from "../utils/lightbox.js";
-
+// Instance de l'API pour les photographes
 const photographerApi = new Api("./data/photographers.json");
+// Récupération de l'ID du photographe à partir de la requête de l'URL
 const photographerId = new URLSearchParams(window.location.search).get("id");
 // Récupère les donées du photographe et des médias associés
 export const getPhotographerById = async () => {
@@ -21,7 +22,7 @@ export const getPhotographerById = async () => {
         .filter(media => media.photographerId == photographerId);
     return { photographer, medias };
 };
-
+// Affichage des profiles des photographes
 const displayProfile = async () => {
     const { photographer, medias } = await getPhotographerById();
     const headerTemplate = new PagePhotographer(photographer);
