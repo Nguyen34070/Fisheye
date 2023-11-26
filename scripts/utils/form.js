@@ -1,3 +1,4 @@
+// ouverture et fermeture du formulaire de contact
 export const openCloseFormContact = () => {
     const contactBtn = document.querySelector(".btn_cta");
     const contactModal = document.querySelector(".modal_wrapper");
@@ -8,7 +9,7 @@ export const openCloseFormContact = () => {
     });
     closeModal.addEventListener("click", () => contactModal.style.display = "none");
 };
-
+// Validation du formulaire
 export const validateForm = () => {
     const form = document.querySelector('.modal_form form');
     const firstName = document.querySelector("#firstname");
@@ -33,7 +34,7 @@ export const validateForm = () => {
             form.reset();
         };
     });
-
+// Vérification de la validité d'un champ du formulaire en utilisant des regex
     const checkInputValidity = (input, regex) => {
         const errorMessage = input.dataset.error;
         const messageProvider = input.nextElementSibling;
@@ -52,7 +53,7 @@ export const validateForm = () => {
         input.classList.toggle('invalid', !isValid);
         input.classList.toggle('valid', isValid);
     };
-
+// Affichage des messages de validation en vérifiant la validité de chaque champ du formulaire
     const displayCustomMessage = () => {
         const regexName = /^([A-Za-z|\s]{3,15})?([-]{0,1})?([A-Za-z|\s]{3,15})$/;
         const regexEmail = /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/;

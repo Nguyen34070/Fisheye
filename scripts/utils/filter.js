@@ -1,15 +1,17 @@
 import { displayTotalLikes } from "../utils/likes.js";
 import { displayLightbox } from "../utils/lightbox.js";
-
+// Gère l'ouverture et fermeture du filtre
 export const openCloseFilterMenu = () => {
     const filterMenu = document.querySelector(".dropdown_content");
     const filterMenuButton = document.querySelector(".btn_drop");
     const filterButtons = document.querySelectorAll(".dropdown_content button");
-
+    
     filterMenuButton.addEventListener("click", () => {
         const isExpanded = filterMenuButton.getAttribute("aria-expanded") === "true" || false;
+
         filterMenuButton.setAttribute("aria-expanded", !isExpanded);
         filterMenu.classList.toggle("curtain_effect");
+
         document.querySelector(".fa-chevron-up").classList.toggle("rotate");
 
         const newAriaHiddenValue = filterMenu.classList.contains("curtain_effect") ? "false" : "true";
@@ -19,7 +21,7 @@ export const openCloseFilterMenu = () => {
         filterButtons.forEach(button => button.setAttribute("tabindex", newTabIndexValue));
     });
 };
-
+// Affichage du médias en fonction du filre sélectionné
 export const displayMediaWithFilter = mediasTemplate => {
     const currentFilter = document.querySelector('#current_filter');
     const allFilters = Array.from(document.querySelectorAll('.dropdown_content li button'))
@@ -29,7 +31,6 @@ export const displayMediaWithFilter = mediasTemplate => {
 
     allFilters.forEach(filter => {
         filter.addEventListener('click', () => {
-
             currentFilter.textContent = filter.textContent;
             if (filterAlreadySelected) filterAlreadySelected.style.display = 'block';
 
@@ -39,7 +40,7 @@ export const displayMediaWithFilter = mediasTemplate => {
             sortByFilter(filter.textContent);
         })
     });
-
+    // Fonction pour trier les médias en fonction du filtre
     const sortByFilter = filterValue => {
         switch (filterValue) {
             case 'Titre':
@@ -52,7 +53,7 @@ export const displayMediaWithFilter = mediasTemplate => {
                 mediasTemplate.medias.sort((a, b) => new Date(b.date) - new Date(a.date));
                 break;
         }
-        
+       // Ajoute une classe animée aux éléments des médias avec un délai progressif  
         mediasTemplate.createMedias();
         const mediasfiltered = mediasTemplate;
         displayLightbox(mediasfiltered);

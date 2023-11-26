@@ -38,4 +38,4 @@ export default class PhotographerCard {
     generatePrice() {
         return `<span class="photographer_price">${this.photographer.price}€/jour</span>`;
     }
-}
+};

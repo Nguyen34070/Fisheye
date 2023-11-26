@@ -35,4 +35,4 @@ export default class PagePhotographer {
             <img class="photographer_thumbnail" src="assets/photographers/thumbnails/${this.photographer.portrait}" alt="${this.photographer.name}">
         `;
     }
-}
+};
