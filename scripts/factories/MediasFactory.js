@@ -11,4 +11,4 @@ export default class MediasFactory {
             throw "unknown data type"
         }
     }
-}
+};
